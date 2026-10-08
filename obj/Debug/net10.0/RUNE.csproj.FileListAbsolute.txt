@@ -192,4 +192,4 @@ C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\ref
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\RUNE.pdb
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\RUNE.genruntimeconfig.cache
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\ref\RUNE.dll
-C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\compressed\jvdtznjhwd-{0}-od0arzsffy-od0arzsffy.gz
+C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\compressed\jvdtznjhwd-{0}-g1ya13gn47-g1ya13gn47.gz

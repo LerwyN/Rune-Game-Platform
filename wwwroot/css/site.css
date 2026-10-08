@@ -47,6 +47,7 @@ body {
   gap: 30px;
 }
 
+
 .language {
   border-radius: 6px;
 }
@@ -62,11 +63,6 @@ body {
 .wishlist-icon a img {
   width: 22px;
   height: 22px;
-}
-
-.wishlist-icon a img:hover {
-  color: #eb0000;
-  
 }
 
 .user-icon img {
@@ -102,8 +98,8 @@ body {
 }
 
 .rune-icon img {
-  height: 60px;
-  padding-left: 20px;
+  height: 70px;
+  padding-left: 30px;
 }
 
 /* main */
@@ -140,6 +136,26 @@ body {
   background: transparent;
   font-size: 16px;
   padding: 0 5px;
+}
+
+.featured-game {
+  width: 80%;
+  height: 400px;
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image:url("/images/banners/Minecraft-banner.jpg");
+  background-size: cover;
+  border-radius: 20px;
+  transition: 0.2s ease-out;
+}
+
+.banner:hover {
+  transform: translateY(-2px);
 }
 
 
