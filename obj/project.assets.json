@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lawli\\OneDrive\\Desktop\\RUNE Web Projesi\\RUNE\\RUNE.csproj",
+      "projectUniqueName": "C:\\Users\\lawli\\OneDrive\\Belgeler\\GitHub\\Rune-Game-Platform\\RUNE.csproj",
       "projectName": "RUNE",
-      "projectPath": "C:\\Users\\lawli\\OneDrive\\Desktop\\RUNE Web Projesi\\RUNE\\RUNE.csproj",
+      "projectPath": "C:\\Users\\lawli\\OneDrive\\Belgeler\\GitHub\\Rune-Game-Platform\\RUNE.csproj",
       "packagesPath": "C:\\Users\\lawli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lawli\\OneDrive\\Desktop\\RUNE Web Projesi\\RUNE\\obj\\",
+      "outputPath": "C:\\Users\\lawli\\OneDrive\\Belgeler\\GitHub\\Rune-Game-Platform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
