@@ -1,2 +1,11 @@
-# Rune-Game-Platform
-Oyunları keşfet, kütüphaneni oluştur, topluluğa katıl. Rune — oyun dünyası yeniden tasarlanıyor.
+# RUNE
+
+**Sadece bir mağaza değil.**
+
+RUNE, oyuncular için geliştirilen yeni nesil bir oyun platformudur.
+
+> 🚧 Geliştirme aşamasında.
+
+## 🌐 Site
+
+Yakında burada olacak.
