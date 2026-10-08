@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #f8f9fa;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -30,13 +31,116 @@ body {
   text-align: start;
 }
 
-.navbar-container{
+
+/* navbar */
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
 }
 
-.navbar-right{
+.navbar-right {
   display: flex;
   align-items: center;
+  padding-right: 30px;
+  gap: 30px;
 }
+
+.language {
+  border-radius: 6px;
+}
+
+.navbar-container a { 
+  text-decoration: none;
+}
+
+.img-icon {
+  height: 22px;
+}
+
+.wishlist-icon a img {
+  width: 22px;
+  height: 22px;
+}
+
+.wishlist-icon a img:hover {
+  color: #eb0000;
+  
+}
+
+.user-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-middle a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  color: #0e0d0d;
+  padding: 5px;
+  align-items: center;
+}
+
+.navbar-middle a::after {
+  background-color: #eb0000;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-middle a:hover::after {
+  transform: scaleX(1);
+}
+
+.rune-icon img {
+  height: 60px;
+  padding-left: 20px;
+}
+
+/* main */
+.search {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 50px;
+  margin: 10px auto;
+  background-color: #e9e9e9;
+  border-radius: 50px;
+  border: 1px solid none;
+  padding: 0 15px;
+}
+
+.search button {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 22px;
+  height: 22px;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+
+

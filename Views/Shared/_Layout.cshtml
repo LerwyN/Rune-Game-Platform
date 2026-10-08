@@ -1,50 +1,54 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RUNE</title>
+    <title>@ViewData["Title"] | Rune'ye Hoş Geldiniz</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/RUNE.site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
         <div class="navbar-container">
             <div>
-                <a href="/">
-                <img src="/wwwroot/images/icon/RuneIcon.png.png" alt="">
+                <a class="rune-icon" href="/">
+                <img src="~/images/icon/RuneIcon.png.png" alt="">
                 </a>
             </div>
-            <div class="">
+            <div class="navbar-middle">
                 <a href="#">Mağaza</a>
                 <a href="#">Kütüphane</a>
                 <a href="#">Topluluk</a>
                 <a href="#">Haberler</a>
-                <a href="#">RUNE'yi indirin</a>
+                <a href="#">Yardım & Destek</a>
+                <a href="#">
+                    <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000" alt=""> RUNE'yi İndir
+                </a>
             </div>
             <div class="navbar-right">
                 <div>
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            TR
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item">Türkçe</a></li>
-                            <li><a class="dropdown-item">Ingilizce</a></li>
-                            <li><a class="dropdown-item">Almanca</a></li>
-                        </ul>
-                    </div>
+                    <select class="language" name="language" id="language-select">
+                        <option value="TR">TR</option>
+                        <option value="EN">EN</option>
+                        <option value="DE">DE</option>
+                    </select>
+                </div>
+                <div class="wishlist-icon p-3 px-4">
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=T6lIeZJi54CY&format=png&color=000000" title="İstek Listesi" alt="">
+                    </a>
+                    <a title="Bildirimler" href="#">
+                        <img src="https://img.icons8.com/?size=100&id=16008&format=png&color=000000" alt="">
+                    </a>
+                    <a title="Sepetim" href="#">
+                        <img src="https://img.icons8.com/?size=100&id=85080&format=png&color=000000" alt="">
+                    </a>
                 </div>
                 <div>
-                    <a href="#">İstek Listesi</a>
-                    <a href="#">Bildirimler</a>
-                    <a href="#">Sepetim</a>
-                </div>
-                <div>
-                    <a href="#">Profilim</a>
+                    <a class="user-icon" title="Profilim" href="#">
+                        <img src="https://img.icons8.com/?size=100&id=vwCkzKYM8Txy&format=png&color=000000" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -55,10 +59,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - RUNE - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
