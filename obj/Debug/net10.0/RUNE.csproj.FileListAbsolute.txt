@@ -308,5 +308,5 @@ C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\bin\Debug\net10.0\run
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\RUNE.csproj.AssemblyReference.cache
-C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\compressed\jvdtznjhwd-{0}-edwpy14slf-edwpy14slf.gz
 C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\RUNE.csproj.Up2Date
+C:\Users\lawli\OneDrive\Belgeler\GitHub\Rune-Game-Platform\obj\Debug\net10.0\compressed\jvdtznjhwd-{0}-0d9a4gjt0r-0d9a4gjt0r.gz

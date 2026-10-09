@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 html {
   font-size: 14px;
 }
@@ -21,6 +21,8 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #f8f9fa;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -53,9 +55,9 @@ body {
 
 .rune-icon img {
   display: block;
-  height: 70px;
+  height: 43px;
   width: auto;
-  padding-left: 40px;
+  padding-left: 46px;
 }
 
 /* orta menu */
@@ -71,6 +73,7 @@ body {
   border-radius: 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   white-space: nowrap;
+  transform: translateX(-45px);
 }
 
 .navbar-middle a {
@@ -90,12 +93,14 @@ body {
   object-fit: contain;
 }
 
-.navbar-middle a.active {
-  background-color: #feeceb;
-  color: #d90000;
+.navbar-middle 
+a.active {
+  background-color: #ffdedc;
+  color: #ff0000;
 }
 
-.navbar-middle a.active img {
+.navbar-middle 
+a.active img {
   filter: brightness(0) saturate(100%)
   invert(12%) sepia(99%) saturate(6500%)
   hue-rotate(0deg) brightness(100%) contrast(110%);
@@ -105,8 +110,17 @@ body {
   background-color: #f5f5f5;
 }
 
-.navbar-middle a.active:hover {
+.navbar-middle 
+a.active:hover {
   background-color: #feeceb;
+}
+
+.nav-divider {
+  display: flex;
+  width: 1px;
+  height: 22px;
+  background-color: #e5e5e5;
+  margin: 4px;
 }
 
 /* indirme ikonu */
@@ -183,20 +197,24 @@ body {
   border-radius: 30px;
   background-color: #fff;
   transition: background-color 0.2s ease;
+  
 }
 
 .profile-card:hover {
   background-color: #fafafa;
 }
 
-.profile-card .user-icon {
+.profile-card 
+.user-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+
 }
 
-.profile-card .user-icon img {
+.profile-card 
+.user-icon img {
   display: block;
   width: 38px;
   height: 38px;
@@ -233,7 +251,7 @@ body {
   align-items: center;
   width: min(650px, calc(100% - 40px));
   height: 50px;
-  margin: 10px auto;
+  margin: 10px 100px;
   padding: 0 15px;
   box-sizing: border-box;
   background-color: #e9e9e9;
@@ -285,7 +303,7 @@ body {
   transition: 0.2s ease-out;
 }
 
-
+/*  */
 
 @media (max-width: 1200px) {
   .navbar-container {
