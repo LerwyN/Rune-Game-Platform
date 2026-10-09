@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+<!DOCTYPE html>
 <html lang="tr">
-<head>
+<head>   
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Rune'ye Hoş Geldiniz</title>
@@ -18,38 +21,55 @@
                 </a>
             </div>
             <div class="navbar-middle">
-                <a href="#">Mağaza</a>
-                <a href="#">Kütüphane</a>
-                <a href="#">Topluluk</a>
-                <a href="#">Haberler</a>
-                <a href="#">Yardım & Destek</a>
+                <a asp-controller="Home" asp-action="Index" class="@(currentController == "Home" ? "active" : "")">
+                    <img src="https://img.icons8.com/?size=100&id=489&format=png&color=000000" alt=""> Mağaza
+                </a>
+                <a asp-controller="Library" asp-action="Index"
+                class="@(currentController == "Library" ? "active" : "")">
+                    <img src="https://img.icons8.com/?size=100&id=NVBQfAAOvi9A&format=png&color=000000" alt=""> Kütüphane
+                </a>
                 <a href="#">
-                    <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000" alt=""> RUNE'yi İndir
+                    <img src="https://img.icons8.com/?size=100&id=101316&format=png&color=000000" alt=""> Topluluk
+                </a>
+                <a href="#">
+                    <img src="https://img.icons8.com/?size=100&id=0XwEi0yisdO8&format=png&color=000000" alt=""> Haberler
+                </a>
+                <a href="#">
+                    <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt=""> Yardım & Destek
+                </a>
+                <a href="#">
+                    <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000" alt=""> Rune'yi İndir
                 </a>
             </div>
             <div class="navbar-right">
-                <div>
-                    <select class="language" name="language" id="language-select">
-                        <option value="TR">TR</option>
-                        <option value="EN">EN</option>
-                        <option value="DE">DE</option>
-                    </select>
-                </div>
+                
+                @* diller eklenecek *@
+
                 <div class="wishlist-icon">
-                    <a href="#">
-                        <img src="https://img.icons8.com/?size=100&id=T6lIeZJi54CY&format=png&color=000000" title="İstek Listesi" alt="">
-                    </a>
-                    <a title="Bildirimler" href="#">
-                        <img src="https://img.icons8.com/?size=100&id=16008&format=png&color=000000" alt="">
-                    </a>
-                    <a title="Sepetim" href="#">
-                        <img src="https://img.icons8.com/?size=100&id=85080&format=png&color=000000" alt="">
-                    </a>
+                    <div class="utility-item">
+                        <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=sSZiheZL0ozl&format=png&color=000000" title="İstek Listesi" alt="">
+                        </a>
+                    </div>
+                    <div class="utility-item">
+                        <a title="Bildirimler" href="#">
+                            <img src="https://img.icons8.com/?size=100&id=iBXDn4eGtFfA&format=png&color=000000" alt="">
+                        </a>
+                    </div>
+                    <div class="utility-item">
+                        <a title="Sepetim" href="#">
+                            <img src="https://img.icons8.com/?size=100&id=Nf4fef5uGONQ&format=png&color=000000" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div>
+                <div class="profile-card">
                     <a class="user-icon" title="Profilim" href="#">
-                        <img src="https://img.icons8.com/?size=100&id=vwCkzKYM8Txy&format=png&color=000000" alt="">
+                        <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
                     </a>
+                    <div class="profile-info">
+                        <h6 class="profile-name">LerwyN</h6>
+                        <p class="profile-level">Seviye 12</p>
+                    </div>
                 </div>
             </div>
         </div>
