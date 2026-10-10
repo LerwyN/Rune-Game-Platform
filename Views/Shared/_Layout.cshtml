@@ -21,26 +21,30 @@ var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
                 </a>
             </div>
             <div class="navbar-middle">
-                <a asp-controller="Home" asp-action="Index" class="@(currentController == "Home" ? "active" : "")">
+                <a asp-controller="Home" asp-action="Index" class="@(currentController == "Home" ? "active" : "")" title="Sıradaki Maceranı Keşfet">
                     <img src="https://img.icons8.com/?size=100&id=489&format=png&color=000000" alt=""> Mağaza
                 </a>
                 <a asp-controller="Library" asp-action="Index"
-                class="@(currentController == "Library" ? "active" : "")">
+                class="@(currentController == "Library" ? "active" : "")" title="Oyunların, Senin Dünyan">
                     <img src="https://img.icons8.com/?size=100&id=NVBQfAAOvi9A&format=png&color=000000" alt=""> Kütüphane
                 </a>
-                <a href="#">
+                <a asp-controller="Community" asp-action="Index"
+                class="@(currentController == "Community" ? "active" : "")" title="Oyun Dünyasının Buluşma Noktası">
                     <img src="https://img.icons8.com/?size=100&id=101316&format=png&color=000000" alt=""> Topluluk
                 </a>
-                <a href="#">
+                <a asp-controller="News" asp-action="Index"
+                class="@(currentController == "News" ? "active" : "")" title="Oyun Dünyasından Haberdar Ol">
                     <img src="https://img.icons8.com/?size=100&id=0XwEi0yisdO8&format=png&color=000000" alt=""> Haberler
                 </a>
-                <a href="#">
+                <a asp-controller="Support" asp-action="Index"
+                class="@(currentController == "Support" ? "active" : "")" title="Her Adımda Yanındayız">
                     <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt=""> Destek
                 </a>
                 <span class="nav-divider"></span>
-                <a href="#">
+                <a href="#" title="Oyun Dünyası Seni Bekliyor">
                     <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000" alt=""> Rune'yi İndir
                 </a>
+                <span class="nav-active-pill"></span>
             </div>
             <div class="navbar-right">
                 

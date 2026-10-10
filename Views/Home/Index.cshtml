@@ -3,12 +3,58 @@
     ViewData["Title"] = "Mağaza";
 }
 
-<div class="">
-    <div class="search">
-        <button>
-        <img  src="https://img.icons8.com/?size=100&id=TQPOC8XaUqZ0&format=png&color=000000" alt="">
+
+<div class="search-filter-row">
+    <div class="search-container">
+        <div class="search">
+            <button>
+                <img src="https://img.icons8.com/?size=100&id=TQPOC8XaUqZ0&format=png&color=000000" alt="">
+            </button>
+            <input type="text" placeholder="Oyun, DLC, kategori veya geliştirici ara...">
+        </div>
+    </div>
+    <div class="filter-wrapper">
+        <button class="filter-button" title="Filtreler">
+            <img src="https://img.icons8.com/?size=100&id=69913&format=png&color=000000" alt="">
         </button>
-        <input type="text" placeholder="Oyun, DLC, kategori veya geliştirici ara...">
+        <div class="filter-panel">
+            <h3>Fiyata göre daralt</h3>
+            <div class="price-filter">
+                <span>0 TL</span>
+                <span>5000 TL</span>
+                <input type="range" min="0" max="5000" value="5000">
+            </div>
+            <label>
+                <input type="checkbox">
+                İndirimler ve etkinlikler
+            </label>
+            <label>
+                <input type="checkbox">
+                Ücretsiz oyunlar
+            </label>
+            <hr>
+            <h3>Oyun türü</h3>
+            <label>
+                <input type="checkbox" value="aksiyon">
+                Aksiyon
+            </label>
+            <label>
+                <input type="checkbox" value="macera">
+                Macera
+            </label>
+            <label>
+                <input type="checkbox" value="rpg">
+                RPG
+            </label>
+            <label>
+                <input type="checkbox" value="strateji">
+                Strateji
+            </label>
+            <div class="filter-actions">
+                <button type="button" class="clear-filters">Temizle</button>
+                <button type="button" class="apply-filters">Uygula</button>
+            </div>
+        </div>
     </div>
 </div>
 
