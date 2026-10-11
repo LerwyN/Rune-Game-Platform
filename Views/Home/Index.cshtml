@@ -1,9 +1,10 @@
 ﻿@{
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
-    ViewData["Title"] = "Mağaza";
+    ViewData["Title"] = "Rune'ye Hoş Geldiniz";
 }
 
 
+@* arama ve filter bölümü *@
 <div class="search-filter-row">
     <div class="search-container">
         <div class="search">
@@ -58,10 +59,73 @@
     </div>
 </div>
 
-<div class="featured-game">
-    <a href="">
-        <div class="banner">
-        
+
+@* oyun banner yer aldı alan ve sağ taraf *@
+<div class="store-layout">
+    <main class="store-main">
+        <div class="featured-game">
+    <div class="banner" id="featuredBanner">
+        <div class="banner-content">
+            <span class="game-label">ÖNE ÇIKANLAR</span>
+            <h1 id="bannerTitle">Red Dead Redemption 2</h1>
+            <p id="bannerDescription">
+                Vahşi Batı'nın acımasız dünyasında kendi hikâyeni yaşa.
+            </p>
+            <div class="banner-buttons">
+                <button type="button" id="trailerButton">
+                    Fragmanı İzle
+                </button>
+                <button type="button" id="detailsButton">
+                    Oyunu İncele
+                </button>
+            </div>
+            <div class="banner-progress">
+                <div class="banner-progress-fill">
+                    
+                </div>
+            </div>
         </div>
-    </a>
+    </div>
+</div>
+
+    </main>
+    <aside class="store-sidebar">
+        <section class="sidebar-card notification-card">
+            <div class="notification-heading">
+                <img src="https://img.icons8.com/?size=100&id=115225&format=png&color=e60000" alt="">
+                <h3>Şu Anda Neler Oluyor?</h3>
+            </div>
+            <div class="wobbo">
+                <img src="/images/Wobbo/WobboNotification.png" alt="Wobbo">
+                <h6>Hmm, Wobbo bile bekliyor!</h6>
+                <p>Yeni bildirimlerin olduğunda burada olacağız</p>
+            </div>
+        </section>
+        <section class="sidebar-card deal-card">
+                <div class="deal-content">
+                    <div class="deal-heading">
+                        <img src="https://img.icons8.com/?size=100&id=3103&format=png&color=e60000" alt="">
+                        <h3>Günün Fırsatı</h3>
+                    </div>
+                    <div class="deal-timer">
+                        <img src="https://img.icons8.com/?size=100&id=108863&format=png&color=000000" alt="">
+                        <p>24:00:00</p>
+                    </div>
+                </div>
+            <div class="deal-game">
+                <img class="deal-favorite" src="https://img.icons8.com/?size=100&id=64767&format=png&color=1A1A1A" alt="">
+                <span class="deal-discount">-70%</span>
+            </div>
+                <div class="deal-price">
+                    <h4>Resident Evil Requiem</h4>
+                    <div class="price-details">
+                        <span class="old-price">3.449,00 TL</span>
+                        <span class="new-price">2.414 TL</span>
+                    </div>
+                </div>
+        </section>
+        <section class="sidebar-card">
+            <img src="https://img.icons8.com/?size=100&id=yZX1GOetNQCq&format=png&color=e60000" alt=""> Arkadaşlarım
+        </section>
+    </aside>
 </div>
