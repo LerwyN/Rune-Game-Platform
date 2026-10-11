@@ -8,4 +8,4 @@ RUNE, oyuncular için geliştirilen yeni nesil bir oyun platformudur.
 
 ## 🌐 Site
 
-Yakında burada olacak.
+[Rune'yi ziyaret et](https://rune-game-platform.onrender.com/)
