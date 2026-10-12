@@ -1,5 +1,34 @@
 ﻿"use strict";
 
+const mobileMenuToggle = document.querySelector("#mobileMenuToggle");
+const mobileMenu = document.querySelector("#mobileMenu");
+
+if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("show");
+        mobileMenuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+    });
+    document.addEventListener("click", (event) => {
+        if (
+            !mobileMenu.contains(event.target) &&
+            !mobileMenuToggle.contains(event.target)
+        ) {
+            mobileMenu.classList.remove("show");
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            mobileMenu.classList.remove("show");
+            mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+
+
 const filterButton = document.querySelector(".filter-button");
 const filterPanel = document.querySelector(".filter-panel");
 
@@ -57,29 +86,29 @@ if (navMiddle && activePill) {
 
 const featuredGames = [
     {
-        title: "Red Dead Redemption 2",
-        description: "Vahşi Batı'nın acımasız dünyasında kendi hikâyeni yaşa.",
-        image: "/images/banners/Red-Dead-Redemption2-Banner.jpg"
+        title: "Grand Theft Auto VI",
+        description: "Vice City sokaklarında suç, aksiyon ve özgürlüğün sınırlarını keşfet.",
+        image: "/images/banners/GrandTheftAutoVI-Banner.avif"
     },
     {
-        title: "The Last of Us Part I",
-        description: "Hayatta kalmak için her şeyini riske at.",
-        image: "/images/banners/TheLastOfUs-Banner.jpg"
+        title: "Ghost of Tsushima",
+        description: "Bir samurayın onur ve intikam mücadelesine katıl.",
+        image: "/images/banners/GhostofTsushima-Banner.jpg"
     },
     {
-        title: "Marvel's Spider-Man 2",
-        description: "New York sokaklarında kendi kahramanlık hikâyeni yaz.",
-        image: "/images/banners/Spider-Man2-Banner.jpg"
+        title: "DOOM: The Dark Ages",
+        description: "The Dark Ages: Cehennem ordularına karşı amansız bir savaşa gir.",
+        image: "/images/banners/Doom-Banner.avif"
     },
     {
-        title: "God of War Ragnarök",
-        description: "Kratos ve Atreus ile İskandinav mitolojisinde destansı bir maceraya atıl.",
-        image: "/images/banners/GodOfWarRagnaörk-Banner.jpg"
+        title: "The Witcher 3: Wild Hunt",
+        description: "Canavarlarla dolu karanlık bir dünyada kaderini yaz.",
+        image: "/images/banners/TheWitcher3WildHunt-Banner.jpg"
     },
     {
-        title: "Alan Wake 2",
-        description: "Karanlık sırları çöz ve korkularla dolu bir dünyada hayatta kal.",
-        image: "/images/banners/AlanWake2-Banner.jpg"
+        title: "Death Stranding 2: On the Beach",
+        description: "Parçalanmış bir dünyada insanlığı yeniden birleştir.",
+        image: "/images/banners/DeathStranding2OntheBeach-Banner.jpg"
     }
 ];
 
@@ -145,4 +174,57 @@ setInterval(() => {
     showFeaturedGame();
     resetBannerProgress();
 }, 5000);
+
+
+const profileMenuToggle = document.querySelector("#profileMenuToggle");
+const profileDropdown = document.querySelector("#profileDropdown");
+
+if (profileMenuToggle && profileDropdown) {
+    profileMenuToggle.addEventListener("click", () => {
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileMenuToggle.classList.toggle("open", isOpen);
+        profileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", (event) => {
+        if (
+            !profileDropdown.contains(event.target) &&
+            !profileMenuToggle.contains(event.target)
+        ) {
+            profileDropdown.classList.remove("show");
+            profileMenuToggle.classList.remove("open");
+            profileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            profileDropdown.classList.remove("show");
+            profileMenuToggle.classList.remove("open");
+            profileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+
+
+const darkThemeBtn = document.querySelector(".dark-theme-btn");
+const lightThemeBtn = document.querySelector(".light-theme-btn");
+
+function setTheme(theme) {
+    document.body.classList.remove("dark-mode", "light-mode");
+    document.body.classList.add(theme + "-mode");
+
+    localStorage.setItem("rune-theme", theme);
+}
+
+const savedTheme = localStorage.getItem("rune-theme") || "light";
+
+setTheme(savedTheme);
+
+darkThemeBtn?.addEventListener("click", () => {
+    setTheme("dark");
+});
+
+lightThemeBtn?.addEventListener("click", () => {
+    setTheme("light");
+});
 

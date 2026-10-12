@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RUNE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0c7c68bd5e965e3aaa5e92783a5dd07bf79a034")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac01137e1cb8cc086559c472d51cb7df39f41743")]
 [assembly: System.Reflection.AssemblyProductAttribute("RUNE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RUNE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

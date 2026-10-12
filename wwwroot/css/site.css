@@ -25,6 +25,30 @@ body {
   font-weight: 500;
 }
 
+
+/* =========================================
+   RUNE THEME SYSTEM
+   Koyu + Beyaz Tema
+========================================= */
+
+/* Varsayılan tema */
+body,
+body.light-mode {
+    --page-bg: #f8f9fa;
+    --surface: #ffffff;
+    --surface-hover: #f5f5f5;
+    --text: #222222;
+    --text-secondary: #777777;
+    --border: #e5e5e5;
+    --divider: #e8e8e8;
+    --search-bg: #e9e9e9;
+    --pill-bg: #ffdedc;
+    --shadow: rgba(0, 0, 0, 0.06);
+
+    background-color: var(--page-bg);
+    color: var(--text);
+}
+
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
@@ -36,7 +60,6 @@ body {
 
 
 /* navbar */
-
 .navbar-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -52,7 +75,6 @@ body {
 }
 
 /* rune ikon */
-
 .rune-icon img {
   display: block;
   height: 43px;
@@ -69,7 +91,6 @@ body {
 }
 
 /* orta menu */
-
 .navbar-middle {
   display: flex;
   align-items: center;
@@ -146,14 +167,12 @@ a.active:hover {
 }
 
 /* indirme ikonu */
-
 .img-icon {
   width: 20px;
   height: 20px;
 }
 
 /* sağ taraf */
-
 .navbar-right {
   display: flex;
   align-items: center;
@@ -165,7 +184,6 @@ a.active:hover {
 }
 
 /* favori, bildirim ve sepet */
-
 .wishlist-icon {
   display: flex;
   align-items: center;
@@ -206,7 +224,6 @@ a.active:hover {
 }
 
 /* profile  */
-
 .profile-card {
   display: flex;
   align-items: center;
@@ -265,8 +282,6 @@ a.active:hover {
 }
 
 /* arama kutusu */
-
-
 .search {
   display: flex;
   align-items: center;
@@ -350,7 +365,6 @@ a.active:hover {
 }
 
 /* filter bölümü */
-
 .filter-panel {
   background-color: #fff;
   border: 1px solid #e5e5e5;
@@ -451,20 +465,20 @@ a.active:hover {
 }
 
 
-/* games */
-
+/* oyun bannerları */
 .featured-game {
   width: 100%;
+  min-width: 0;
   height: 400px;
   margin: 14px 0 0;
   overflow: hidden;
   border-radius: 20px;
+  box-sizing: border-box;
 }
-
 
 .banner {
   position: relative;
-  --banner-image: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0) 100%), url("/images/banners/Red-Dead-Redemption2-Banner.jpg");
+  --banner-image: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0) 100%), url("/images/banners/GrandTheftAutoVI-Banner.avif");
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -475,7 +489,6 @@ a.active:hover {
   transition: none;
   transform: none;
 }
-
 
 .banner::after {
   content: '';
@@ -519,58 +532,64 @@ a.active:hover {
 
 .banner-content {
   position: absolute;
-  left: 40px;
-  top: 67%;
-  transform: translateY(-50%);
-  max-width: 420px;
+  left: 32px;
+  right: 32px;
+  top: 50%;
+  transform: translateY(0%);
+  max-width: 600px;
   z-index: 2;
 }
 
 .banner-content h1 {
   color: #fff;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 14px;
+  line-height: 1.2;
+  margin: 0 0 14px;
 }
 
 .banner-content p {
   color: #f5f5f5;
   font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.5;
+  margin: 0 0 24px;
 }
 
 .game-label {
+  position: absolute;
+  top: -100px;
+  left: 1px;
   display: inline-block;
   background-color: #e60000;
   color: #fff;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
-  padding: 5px 10px;
+  padding: 7px 12px;
   border-radius: 20px;
   letter-spacing: 0.5px;
-  margin-bottom: 11px;
-  position: relative;
-  transform: translateY(-150px);
+  margin: 0;
+  transform: none;
+  z-index: 3;
+  transform: translateY(-90px);
 }
 
 .banner-buttons {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-bottom: 24px;
 }
 
 .banner-buttons button {
-  padding: 12px 20px;
+  padding: 14px 24px;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2 ease;
+  transition: background-color 0.2s ease;
   background-color: #e60000;
   color: #fff;
-  border: 1px ;
+  border: none;
 }
 
 .banner-buttons button:hover {
@@ -592,7 +611,6 @@ a.active:hover {
   box-sizing: border-box;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   min-height: 60px;
-  transform: translateX(40px);
 }
 
 .sidebar-card img {
@@ -613,6 +631,9 @@ a.active:hover {
   grid-template-columns: minmax(0, 1fr) 270px;
   align-items: start;
   gap: 24px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .store-sidebar {
@@ -621,7 +642,7 @@ a.active:hover {
   gap: 12px;
   position: sticky;
   top: 10px;
-  
+  min-width: 0;
 }
 
 .deal-card {
@@ -652,7 +673,7 @@ a.active:hover {
 .deal-game {
   width: 100%;
   height: 130px;
-  background-image: url("/images/banners/Resident-Evil-Requiem-Banner.avif");
+  background-image: url("/images/banners/Red-Dead-Redemption2-Banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -772,7 +793,6 @@ a.active:hover {
   white-space: nowrap;
 }
 
-
 .deal-heading {
   display: flex;
   align-items: center;
@@ -799,7 +819,6 @@ a.active:hover {
 }
 
 /* bildirim kartı */
-
 .notification-card {
   display: flex;
   flex-direction: column;
@@ -812,8 +831,8 @@ a.active:hover {
 }
 
 /* başlık ve ikon sol üstte */
-
-.notification-card .notification-heading {
+.notification-card 
+.notification-heading {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -889,7 +908,7 @@ a.active:hover {
 
 /* bar */
 .banner-progress {
-  width: 50%;
+  width: 30%;
   height: 4px;
   margin-top: 10px;
   background: #333;
@@ -904,7 +923,134 @@ a.active:hover {
   height: 100%;
   background: #fff;
   border-radius: 10px;
-  transition: width 7s linear;
+  transition: width 5s linear;
+}
+
+/* mobile için ayarlar */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 20px;
+  z-index: 1000;
+  background: #fff;
+  width: min(320px, calc(100vw - 40px));
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 9px;
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu > a img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mobile-menu > a:hover {
+  background-color: #fff0f0;
+  color: #d90000;
+}
+
+.mobile-menu > a.logout-link {
+  color: #d90000;
+}
+
+/* profile panel */
+
+.profile-card {
+  position: relative;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 2000;
+}
+
+.profile-dropdown.show {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.profile-menu-toggle {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.profile-menu-toggle.open {
+  transform: rotate(180deg);
+}
+
+.profile-menu-toggle img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.profile-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile-dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+.profile-dropdown-item img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.profile-dropdown-divider {
+  height: 1px;
+  background-color: #e8e8e8;
+  margin: 5px 0;
 }
 
 
@@ -912,63 +1058,282 @@ a.active:hover {
 /*  */
 
 @media (max-width: 1200px) {
-  .navbar-container {
-  grid-template-columns: auto 1fr;
-  gap: 12px;
-  padding: 0 16px;
-  }
+    /* navbar */
+    .navbar-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+    }
 
-  .rune-icon img {
-  padding-left: 0;
-  }
+    .navbar-middle,
+    .navbar-right {
+        display: none;
+    }
 
-  .navbar-middle {
-  justify-self: start;
-  max-width: 100%;
-  overflow-x: auto;
-  }
+    .mobile-menu-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        background: #fff;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
 
-  .navbar-right {
-  grid-column: 1 / -1;
-  justify-self: end;
-  padding-right: 0;
-  }
+    .mobile-menu-button span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #222;
+        border-radius: 2px;
+    }
 
-  .featured-game {
-  width: 90%;
-  }
+    /* hamburger menüsü */
+    .mobile-menu {
+        right: 16px;
+        width: min(320px, calc(100vw - 32px));
+    }
+
+    .mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+        padding: 14px;
+        border: 1px solid #eee;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+    }
+
+    /* ana içerik */
+    .store-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        min-width: 0;
+    }
+
+    .featured-game {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* yan kartlar ana içeriğin altına geçer */
+    .store-sidebar {
+        position: static;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .sidebar-card,
+    .notification-card,
+    .deal-card,
+    .store-sidebar > .sidebar-card:not(.notification-card) {
+        margin-left: 0;
+        transform: none;
+    }
 }
 
 @media (max-width: 700px) {
-  .navbar-container {
-  height: auto;
-  min-height: 70px;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  padding: 10px;
-  }
+    .navbar-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        height: auto;
+        min-height: 70px;
+        padding: 10px 16px;
+    }
 
-  .navbar-middle {
-  justify-self: center;
-  max-width: calc(100vw - 20px);
-  }
+    .navbar-middle,
+    .navbar-right {
+        display: none;
+    }
 
-  .navbar-right {
-  grid-column: auto;
-  justify-self: center;
-  padding: 0;
-  }
+    /* Soldan kayan hamburger menüsü */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        position: fixed;
+        top: 0;
+        left: auto;
+        right: 0;
+        width: min(320px, 85vw);
+        height: 100vh;
+        height: 100dvh;
+        padding: 20px 14px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        background-color: #fff;
+        border-right: 1px solid #eee;
+        border-radius: 0 18px 18px 0;
+        box-shadow: 12px 0 35px rgba(0, 0, 0, 0.12);
+        z-index: 2000;
+        transform: translateX(105%);
+        visibility: hidden;
+        transition:
+        transform 0.3s ease,
+        visibility 0.3s ease;
+    }
 
-  .search {
-  width: calc(100% - 24px);
-  }
+    .mobile-menu.show {
+        transform: translateX(0);
+        visibility: visible;
+    }
 
-  .featured-game {
-  width: calc(100% - 24px);
-  height: 260px;
-  }
+    .mobile-menu-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        background-color: #fff;
+        cursor: pointer;
+        box-sizing: border-box;
+        z-index: 2001;
+    }
+
+    .mobile-menu-button span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+        border-radius: 2px;
+        transition: background-color 0.2s ease;
+    }
+
+    .mobile-menu > a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 9px;
+        color: #222;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .mobile-menu > a img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .mobile-menu > a:hover {
+        background-color: #fff0f0;
+        color: #d90000;
+    }
+
+    .mobile-menu > a.logout-link {
+        color: #d90000;
+    }
+
+    /* Arama ve filtreleme */
+    .search-filter-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 6px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .search-container {
+        flex: 1 1 auto;
+        width: 0;
+        min-width: 0;
+    }
+
+    .search {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        margin: 8px 0;
+        padding: 0 12px;
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    .search input {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .filter-wrapper {
+        flex: 0 0 auto;
+        flex-shrink: 0;
+        transform: none;
+    }
+
+    /* Oyun alanı */
+    .store-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        min-width: 0;
+    }
+
+    .featured-game {
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+        box-sizing: border-box;
+    }
+
+    .store-sidebar {
+        position: static;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Banner yazıları */
+    .banner-content {
+        left: 14px;
+        right: 14px;
+        top: 55%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .banner-content h1 {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .banner-content p {
+        max-width: 230px;
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .banner-content button {
+        max-width: 100%;
+        transform: translateY(-1px);
+    }
 }
-
 
 @keyframes bannerSlideIn {
   from {
