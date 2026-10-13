@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 html {
   font-size: 14px;
 }
@@ -9,8 +12,14 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow:
+    0 0 0 0.1rem white,
+    0 0 0 0.25rem #258cfb;
 }
 
 html {
@@ -21,43 +30,36 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #f8f9fa;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
 }
 
-
-/* =========================================
-   RUNE THEME SYSTEM
-   Koyu + Beyaz Tema
-========================================= */
-
-/* Varsayılan tema */
-body,
-body.light-mode {
-    --page-bg: #f8f9fa;
-    --surface: #ffffff;
-    --surface-hover: #f5f5f5;
-    --text: #222222;
-    --text-secondary: #777777;
-    --border: #e5e5e5;
-    --divider: #e8e8e8;
-    --search-bg: #e9e9e9;
-    --pill-bg: #ffdedc;
-    --shadow: rgba(0, 0, 0, 0.06);
-
-    background-color: var(--page-bg);
-    color: var(--text);
+html {
+  min-height: 100%;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body>.container {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
   text-align: start;
 }
-
 
 /* navbar */
 .navbar-container {
@@ -77,10 +79,11 @@ body.light-mode {
 /* rune ikon */
 .rune-icon img {
   display: block;
-  height: 43px;
+  height: 40px;
   width: auto;
-  padding-left: 46px;
+  padding-left: 48px;
   transform: translateY(10px);
+  cursor: default;
 }
 
 .version {
@@ -113,7 +116,7 @@ body.light-mode {
   padding: 7px 5px;
   color: #222;
   border-radius: 20px;
-  transition: background-color ;
+  transition: background-color;
   position: relative;
   z-index: 1;
 }
@@ -125,17 +128,13 @@ body.light-mode {
   object-fit: contain;
 }
 
-.navbar-middle 
-a.active {
+.navbar-middle a.active {
   background-color: transparent;
   color: #ff0000;
 }
 
-.navbar-middle 
-a.active img {
-  filter: brightness(0) saturate(100%)
-  invert(12%) sepia(99%) saturate(6500%)
-  hue-rotate(0deg) brightness(100%) contrast(110%);
+.navbar-middle a.active img {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(99%) saturate(6500%) hue-rotate(0deg) brightness(100%) contrast(110%);
 }
 
 .navbar-middle a:hover {
@@ -143,8 +142,7 @@ a.active img {
   color: #ff0000;
 }
 
-.navbar-middle 
-a.active:hover {
+.navbar-middle a.active:hover {
   background-color: transparent;
 }
 
@@ -163,7 +161,7 @@ a.active:hover {
   top: 0;
   border-radius: 20px;
   z-index: 0;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); 
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* indirme ikonu */
@@ -242,16 +240,14 @@ a.active:hover {
   background-color: #fafafa;
 }
 
-.profile-card 
-.user-icon {
+.profile-card .user-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.profile-card 
-.user-icon img {
+.profile-card .user-icon img {
   display: block;
   width: 35px;
   height: 35px;
@@ -361,7 +357,7 @@ a.active:hover {
 }
 
 .filter-button:hover {
-  background-color: #f5f5f5
+  background-color: #f5f5f5;
 }
 
 /* filter bölümü */
@@ -464,7 +460,6 @@ a.active:hover {
   z-index: 20;
 }
 
-
 /* oyun bannerları */
 .featured-game {
   width: 100%;
@@ -478,7 +473,12 @@ a.active:hover {
 
 .banner {
   position: relative;
-  --banner-image: linear-gradient(to right, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0) 100%), url("/images/banners/GrandTheftAutoVI-Banner.avif");
+  --banner-image:
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0) 100%),
+    url("/images/banners/GrandTheftAutoVI-Banner.avif");
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -490,8 +490,27 @@ a.active:hover {
   transform: none;
 }
 
+.banner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.banner-video.playing {
+  opacity: 1;
+}
+
+.banner-content {
+  position: relative; z-index: 1;
+}
+
 .banner::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -503,12 +522,10 @@ a.active:hover {
   pointer-events: none;
   opacity: 1;
   transform: scale(1);
-  transition: opacity 1s ease, transform 1.4s ease;
+  transition:
+    opacity 1s ease,
+    transform 1.4s ease;
   transform: translateX(0) scale(1);
-}
-
-.banner:hover::after {
-  transform: scale(1.06);
 }
 
 .banner.banner-entering::after {
@@ -517,10 +534,13 @@ a.active:hover {
 }
 
 .banner::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 1%, transparent 100%);
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.4) 1%,
+      transparent 100%);
   transition: opacity 0.4s ease;
   pointer-events: none;
   opacity: 0;
@@ -557,7 +577,7 @@ a.active:hover {
 
 .game-label {
   position: absolute;
-  top: -100px;
+  top: -190px;
   left: 1px;
   display: inline-block;
   background-color: #e60000;
@@ -570,13 +590,12 @@ a.active:hover {
   margin: 0;
   transform: none;
   z-index: 3;
-  transform: translateY(-90px);
 }
 
 .banner-buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
   margin-bottom: 24px;
 }
 
@@ -596,7 +615,6 @@ a.active:hover {
   background-color: #fff;
   color: #e60000;
 }
-
 
 /* bildirimler, günün fırsatı, arkadaşlar */
 .sidebar-card {
@@ -831,8 +849,7 @@ a.active:hover {
 }
 
 /* başlık ve ikon sol üstte */
-.notification-card 
-.notification-heading {
+.notification-card .notification-heading {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -843,23 +860,20 @@ a.active:hover {
   margin-bottom: 8px;
 }
 
-.notification-card 
-.notification-heading img {
+.notification-card .notification-heading img {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
 
-.notification-card 
-.notification-heading h3 {
+.notification-card .notification-heading h3 {
   font-size: 14px;
   font-weight: 600;
   margin: 0;
   text-align: left;
 }
 
-.notification-card 
-.wobbo {
+.notification-card .wobbo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -868,8 +882,7 @@ a.active:hover {
   text-align: center;
 }
 
-.notification-card 
-.wobbo img {
+.notification-card .wobbo img {
   width: 160px;
   height: 140px;
   object-fit: contain;
@@ -878,16 +891,14 @@ a.active:hover {
   margin: 0 auto 12px;
 }
 
-.notification-card 
-.wobbo h6 {
+.notification-card .wobbo h6 {
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 10px;
   color: #222;
 }
 
-.notification-card 
-.wobbo p {
+.notification-card .wobbo p {
   font-size: 15px;
   margin: 0;
   line-height: 1.5;
@@ -899,8 +910,7 @@ a.active:hover {
 }
 
 .deal-card,
-.store-sidebar > 
-.sidebar-card:not(.notification-card) {
+.store-sidebar>.sidebar-card:not(.notification-card) {
   margin-top: 0;
   margin-left: 40px;
   transform: translateY(-60px);
@@ -941,7 +951,7 @@ a.active:hover {
   display: none;
 }
 
-.mobile-menu > a {
+.mobile-menu>a {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -950,22 +960,24 @@ a.active:hover {
   color: #222;
   text-decoration: none;
   font-size: 14px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.mobile-menu > a img {
+.mobile-menu>a img {
   width: 22px;
   height: 22px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.mobile-menu > a:hover {
+.mobile-menu>a:hover {
   background-color: #fff0f0;
   color: #d90000;
 }
 
-.mobile-menu > a.logout-link {
+.mobile-menu>a.logout-link {
   color: #d90000;
 }
 
@@ -994,7 +1006,6 @@ a.active:hover {
   flex-direction: column;
   gap: 4px;
 }
-
 
 .profile-menu-toggle {
   border: none;
@@ -1053,296 +1064,597 @@ a.active:hover {
   margin: 5px 0;
 }
 
-
-
 /*  */
 
 @media (max-width: 1200px) {
-    /* navbar */
-    .navbar-container {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 16px;
-    }
 
-    .navbar-middle,
-    .navbar-right {
-        display: none;
-    }
+  /* navbar */
+  .navbar-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
 
-    .mobile-menu-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        width: 44px;
-        height: 44px;
-        padding: 10px;
-        border: 1px solid #e5e5e5;
-        border-radius: 12px;
-        background: #fff;
-        cursor: pointer;
-        box-sizing: border-box;
-    }
+  .navbar-middle,
+  .navbar-right {
+    display: none;
+  }
 
-    .mobile-menu-button span {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #222;
-        border-radius: 2px;
-    }
+  .mobile-menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
 
-    /* hamburger menüsü */
-    .mobile-menu {
-        right: 16px;
-        width: min(320px, calc(100vw - 32px));
-    }
+  .mobile-menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #222;
+    border-radius: 2px;
+  }
 
-    .mobile-menu.show {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        max-height: calc(100vh - 110px);
-        overflow-y: auto;
-        padding: 14px;
-        border: 1px solid #eee;
-        border-radius: 16px;
-        background: #fff;
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
-        box-sizing: border-box;
-    }
+  /* hamburger menüsü */
+  .mobile-menu {
+    right: 16px;
+    width: min(320px, calc(100vw - 32px));
+  }
 
-    /* ana içerik */
-    .store-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 24px;
-        min-width: 0;
-    }
+  .mobile-menu.show {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+    padding: 14px;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+  }
 
-    .featured-game {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
+  /* ana içerik */
+  .store-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    min-width: 0;
+  }
 
-    /* yan kartlar ana içeriğin altına geçer */
-    .store-sidebar {
-        position: static;
-        width: 100%;
-        min-width: 0;
-    }
+  .featured-game {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
-    .sidebar-card,
-    .notification-card,
-    .deal-card,
-    .store-sidebar > .sidebar-card:not(.notification-card) {
-        margin-left: 0;
-        transform: none;
-    }
+  /* yan kartlar ana içeriğin altına geçer */
+  .store-sidebar {
+    position: static;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sidebar-card,
+  .notification-card,
+  .deal-card,
+  .store-sidebar>.sidebar-card:not(.notification-card) {
+    margin-left: 0;
+    transform: none;
+  }
 }
 
 @media (max-width: 700px) {
-    .navbar-container {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        align-items: center;
-        height: auto;
-        min-height: 70px;
-        padding: 10px 16px;
-    }
+  .navbar-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    height: auto;
+    min-height: 70px;
+    padding: 10px 16px;
+  }
 
-    .navbar-middle,
-    .navbar-right {
-        display: none;
-    }
+  .navbar-middle,
+  .navbar-right {
+    display: none;
+  }
 
-    /* Soldan kayan hamburger menüsü */
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        position: fixed;
-        top: 0;
-        left: auto;
-        right: 0;
-        width: min(320px, 85vw);
-        height: 100vh;
-        height: 100dvh;
-        padding: 20px 14px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        background-color: #fff;
-        border-right: 1px solid #eee;
-        border-radius: 0 18px 18px 0;
-        box-shadow: 12px 0 35px rgba(0, 0, 0, 0.12);
-        z-index: 2000;
-        transform: translateX(105%);
-        visibility: hidden;
-        transition:
-        transform 0.3s ease,
-        visibility 0.3s ease;
-    }
+  /* soldan kayan hamburger menüsü */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    padding: 20px 14px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    border-radius: 0 18px 18px 0;
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.12);
+    z-index: 2000;
+    transform: translateX(105%);
+    visibility: hidden;
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
 
-    .mobile-menu.show {
-        transform: translateX(0);
-        visibility: visible;
-    }
+  .mobile-menu.show {
+    transform: translateX(0);
+    visibility: visible;
+  }
 
-    .mobile-menu-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        width: 44px;
-        height: 44px;
-        padding: 10px;
-        border: 1px solid #e5e5e5;
-        border-radius: 12px;
-        background-color: #fff;
-        cursor: pointer;
-        box-sizing: border-box;
-        z-index: 2001;
-    }
+  .mobile-menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index: 2001;
+  }
 
-    .mobile-menu-button span {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background-color: #222;
-        border-radius: 2px;
-        transition: background-color 0.2s ease;
-    }
+  .mobile-menu-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+  }
 
-    .mobile-menu > a {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px;
-        border-radius: 9px;
-        color: #222;
-        text-decoration: none;
-        font-size: 14px;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
+  .mobile-menu>a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 9px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
 
-    .mobile-menu > a img {
-        width: 22px;
-        height: 22px;
-        object-fit: contain;
-        flex-shrink: 0;
-    }
+  .mobile-menu>a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
 
-    .mobile-menu > a:hover {
-        background-color: #fff0f0;
-        color: #d90000;
-    }
+  .mobile-menu>a:hover {
+    background-color: #fff0f0;
+    color: #d90000;
+  }
 
-    .mobile-menu > a.logout-link {
-        color: #d90000;
-    }
+  .mobile-menu>a.logout-link {
+    color: #d90000;
+  }
 
-    /* Arama ve filtreleme */
-    .search-filter-row {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 6px;
-        padding: 0 12px;
-        box-sizing: border-box;
-    }
+  /* arama ve filtreleme */
+  .search-filter-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
 
-    .search-container {
-        flex: 1 1 auto;
-        width: 0;
-        min-width: 0;
-    }
+  .search-container {
+    flex: 1 1 auto;
+    width: 0;
+    min-width: 0;
+  }
 
-    .search {
-        display: block;
-        width: 100%;
-        min-width: 0;
-        height: 44px;
-        margin: 8px 0;
-        padding: 0 12px;
-        box-sizing: border-box;
-        transform: none;
-    }
+  .search {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    margin: 8px 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+    transform: none;
+  }
 
-    .search input {
-        width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .search input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .filter-wrapper {
-        flex: 0 0 auto;
-        flex-shrink: 0;
-        transform: none;
-    }
+  .filter-wrapper {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    transform: none;
+  }
 
-    /* Oyun alanı */
-    .store-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 20px;
-        min-width: 0;
-    }
+  /* oyun alanı */
+  .store-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    min-width: 0;
+  }
 
-    .featured-game {
-        width: 100%;
-        max-width: 100%;
-        height: 280px;
-        box-sizing: border-box;
-    }
+  .featured-game {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    box-sizing: border-box;
+  }
 
-    .store-sidebar {
-        position: static;
-        width: 100%;
-        min-width: 0;
-    }
+  .store-sidebar {
+    position: static;
+    width: 100%;
+    min-width: 0;
+  }
 
-    /* Banner yazıları */
-    .banner-content {
-        left: 14px;
-        right: 14px;
-        top: 55%;
-        max-width: none;
-        box-sizing: border-box;
-    }
+  /* banner yazıları */
+  .banner-content {
+    left: 14px;
+    right: 14px;
+    top: 55%;
+    max-width: none;
+    box-sizing: border-box;
+  }
 
-    .banner-content h1 {
-        font-size: 18px;
-        line-height: 1.2;
-        margin-bottom: 8px;
-    }
+  .banner-content h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
 
-    .banner-content p {
-        max-width: 230px;
-        font-size: 12px;
-        line-height: 1.4;
-        margin-bottom: 12px;
-    }
+  .banner-content p {
+    max-width: 230px;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
 
-    .banner-content button {
-        max-width: 100%;
-        transform: translateY(-1px);
-    }
+  .banner-content button {
+    max-width: 100%;
+    transform: translateY(-1px);
+  }
 }
 
 @keyframes bannerSlideIn {
   from {
-  opacity: 0;
-  transform: translateX(60px);
+    opacity: 0;
+    transform: translateX(60px);
   }
+
   to {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+#featuredBanner {
+  background-image: var(--banner-image);
+  background-size: cover;
+  background-position: center;
+  transition: background-position 1s ease;
+}
+
+#featuredBanner.banner-entering #bannerTitle,
+#featuredBanner.banner-entering #bannerDescription {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+#bannerTitle,
+#bannerDescription {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* footer */
+.rune-footer {
+  width: 100%;
+  padding: 40px 3.7% 28px;
+  margin-top: 0;
+  background: #171719;
+  color: #f5f5f5;
+  border-top: 1px solid #29292b;
+  box-sizing: border-box;
+}
+
+.rune-footer *,
+.rune-footer *::before,
+.rune-footer *::after {
+  box-sizing: border-box;
+}
+
+/* üst satır ve sosyal medya */
+
+.rune-footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #3a3a3c;
+}
+
+.rune-store {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  transform: translateY(5px);
+  cursor: default;
+}
+
+.rune-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rune-footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #252527;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: none;
+}
+
+.rune-footer-socials a:hover {
+  background: #3a3a3d;
+}
+
+.rune-footer-socials img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ana alan */
+
+.rune-footer-main {
+  display: grid;
+  grid-template-columns: minmax(250px, 1.8fr) repeat(4, minmax(110px, 1fr));
+  gap: 36px;
+  padding: 38px 0 46px;
+}
+
+.rune-footer-about {
+  max-width: 350px;
+}
+
+.rune-footer-about h3,
+.rune-footer-column h3 {
+  margin: 0 0 19px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rune-footer-about p {
+  max-width: 340px;
+  margin: 0;
+  color: #b1b1b6;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* bağlantı sütunları */
+
+.rune-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.rune-footer-column h3 {
+  margin-bottom: 3px;
+}
+
+.rune-footer-column a {
+  color: #b1b1b6;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: none;
+}
+
+.rune-footer-column a:hover {
+  color: #ffffff;
+}
+
+/* alt satır */
+
+.rune-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #3a3a3c;
+}
+
+.rune-footer-bottom>p {
+  margin: 0;
+  color: #b1b1b6;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.rune-footer-bottom-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.rune-footer-bottom-right>a,
+.rune-footer-bottom-right>span {
+  color: #b1b1b6;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.rune-footer-bottom-right>a:hover {
+  color: #ffffff;
+}
+
+/* yukarı çık */
+
+.rune-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: #303033;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: none;
+}
+
+.rune-back-to-top:hover {
+  background: #414145;
+}
+
+.rune-back-to-top span {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1;
+}
+
+/* tablet */
+
+@media (max-width: 1100px) {
+  .rune-footer {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .rune-footer-main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 28px;
+  }
+
+  .rune-footer-about {
+    grid-column: 1 / -1;
+    max-width: 450px;
+  }
+}
+
+/* mobil */
+
+@media (max-width: 600px) {
+  .rune-footer {
+    padding: 28px 20px 22px;
+  }
+
+  .rune-footer-header {
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 24px;
+  }
+
+  .rune-footer-logo img {
+    width: 90px;
+    height: 35px;
+  }
+
+  .rune-footer-socials {
+    gap: 7px;
+  }
+
+  .rune-footer-socials a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .rune-footer-socials img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .rune-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+    padding: 30px 0 35px;
+  }
+
+  .rune-footer-about {
+    grid-column: 1 / -1;
+  }
+
+  .rune-footer-about h3,
+  .rune-footer-column h3 {
+    font-size: 13px;
+  }
+
+  .rune-footer-column {
+    gap: 12px;
+  }
+
+  .rune-footer-column a {
+    font-size: 12px;
+  }
+
+  .rune-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .rune-footer-bottom-right {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .rune-back-to-top {
+    padding: 12px 14px;
+  }
+}

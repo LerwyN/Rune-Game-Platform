@@ -1,189 +1,189 @@
 ﻿@{
-var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
 }
 <!DOCTYPE html>
 <html lang="tr">
-<head>   
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="icon" href="~/images/icon/RuneIcon.png">
+    <link rel="icon" href="~/images/icon/RuneWebIconStyle.png">
 </head>
+
 <body>
 
-<header>
-    <div class="navbar-container">
-        <div class="navbar-logo">
-            <a asp-controller="Home" asp-action="Index" class="rune-icon">
-                <img src="~/images/icon/RuneWebIconStyle.png" alt="RUNE">
-                <p class="version">Version: Beta</p>
-            </a>
+    <header>
+        <div class="navbar-container ">
+            <div class="navbar-logo">
+                <a class="rune-icon">
+                    <img src="~/images/icon/RuneWebStyle.png" alt="RUNE">
+                    <p class="version">Version: Beta</p>
+                </a>
+            </div>
+            <nav class="navbar-middle">
+                <a asp-controller="Home" asp-action="Index" class="@(currentController == "Home" ? "active" : "")"
+                   title="Sıradaki Maceranı Keşfet">
+                    <img src="https://img.icons8.com/?size=100&id=489&format=png&color=000000" alt="">
+                    Mağaza
+                </a>
+                <a asp-controller="Library" asp-action="Index" class="@(currentController == "Library" ? "active" : "")"
+                   title="Oyunların, Senin Dünyan">
+                    <img src="https://img.icons8.com/?size=100&id=NVBQfAAOvi9A&format=png&color=000000" alt="">
+                    Kütüphane
+                </a>
+                <a asp-controller="Community" asp-action="Index"
+                   class="@(currentController == "Community" ? "active" : "")" title="Oyun Dünyasının Buluşma Noktası">
+                    <img src="https://img.icons8.com/?size=100&id=101316&format=png&color=000000" alt="">
+                    Topluluk
+                </a>
+                <a asp-controller="News" asp-action="Index" class="@(currentController == "News" ? "active" : "")"
+                   title="Oyun Dünyasından Haberdar Ol">
+                    <img src="https://img.icons8.com/?size=100&id=0XwEi0yisdO8&format=png&color=000000" alt="">
+                    Haberler
+                </a>
+                <a asp-controller="Support" asp-action="Index" class="@(currentController == "Support" ? "active" : "")"
+                   title="Her Adımda Yanındayız">
+                    <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="">
+                    Destek
+                </a>
+                <span class="nav-divider"></span>
+                <a href="#" title="Oyun Dünyası Seni Bekliyor">
+                    <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000"
+                         alt="">
+                    Rune'yi İndir
+                </a>
+                <span class="nav-active-pill"></span>
+            </nav>
+            <div class="navbar-right">
+
+                @* Diller eklenecek *@
+
+                <div class="wishlist-icon">
+                    <div class="utility-item">
+                        <a href="#" title="İstek Listesi">
+                            <img src="https://img.icons8.com/?size=100&id=sSZiheZL0ozl&format=png&color=000000" alt="">
+                        </a>
+                    </div>
+                    <div class="utility-item">
+                        <a href="#" title="Bildirimler">
+                            <img src="https://img.icons8.com/?size=100&id=iBXDn4eGtFfA&format=png&color=000000" alt="">
+                        </a>
+                    </div>
+                    <div class="utility-item">
+                        <a href="#" title="Sepetim">
+                            <img src="https://img.icons8.com/?size=100&id=Nf4fef5uGONQ&format=png&color=000000" alt="">
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="profile-card">
+                    <a class="user-icon" title="Profilim" href="#">
+                        <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
+                    </a>
+                    <div class="profile-info">
+                        <h6 class="profile-name">LerwyN</h6>
+                        <p class="profile-level">Seviye 12</p>
+                    </div>
+                    <button class="profile-menu-toggle" id="profileMenuToggle" type="button"
+                            aria-label="Profil menüsünü aç" aria-expanded="false">
+                        <img class="" src="https://img.icons8.com/?size=100&id=99991&format=png&color=000000" alt="">
+                    </button>
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <div class="profile-dropdown-header">
+                            <strong>LerwyN &</strong>
+                            <span> Seviye 12 · Admin</span>
+                        </div>
+                        <a href="#" class="profile-dropdown-item">
+                            <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
+                            Profilim
+                        </a>
+                        <a href="#" class="profile-dropdown-item">
+                            <img src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=000000"
+                                 alt="">Ayarlar
+                        </a>
+                        <div class="profile-dropdown-divider"></div>
+                        <button type="button" class="profile-dropdown-item dark-theme-btn">
+                            <img src="https://img.icons8.com/?size=100&id=xlD3xOrQjTJO&format=png&color=000000"
+                                 alt="">Koyu Tema
+                        </button>
+                        <button type="button" class="profile-dropdown-item light-theme-btn">
+                            <img src="https://img.icons8.com/?size=100&id=648&format=png&color=000000" alt=""> Beyaz
+                            Tema
+                        </button>
+                        <div class="profile-dropdown-divider"></div>
+                        <button type="button" class="profile-dropdown-item logout-link">
+                            <img src="https://img.icons8.com/?size=100&id=3HSHWjvK9Yxq&format=png&color=d90000"
+                                 alt="">Çıkış Yap
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-button" id="mobileMenuToggle" type="button" aria-label="Menüyü aç"
+                    aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <nav class="navbar-middle">
-            <a asp-controller="Home" asp-action="Index"
-                class="@(currentController == "Home" ? "active" : "")"
-                title="Sıradaki Maceranı Keşfet">
+        <nav class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-profile">
+                <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="Profil">
+                <div>
+                    <strong>LerwyN</strong>
+                    <p>Seviye 12</p>
+                </div>
+            </div>
+            <a asp-controller="Home" asp-action="Index">
                 <img src="https://img.icons8.com/?size=100&id=489&format=png&color=000000" alt="">
                 Mağaza
             </a>
-            <a asp-controller="Library" asp-action="Index"
-                class="@(currentController == "Library" ? "active" : "")"
-                title="Oyunların, Senin Dünyan">
+            <a asp-controller="Library" asp-action="Index">
                 <img src="https://img.icons8.com/?size=100&id=NVBQfAAOvi9A&format=png&color=000000" alt="">
                 Kütüphane
             </a>
-            <a asp-controller="Community" asp-action="Index"
-                class="@(currentController == "Community" ? "active" : "")"
-                title="Oyun Dünyasının Buluşma Noktası">
+            <a asp-controller="Community" asp-action="Index">
                 <img src="https://img.icons8.com/?size=100&id=101316&format=png&color=000000" alt="">
                 Topluluk
             </a>
-            <a asp-controller="News" asp-action="Index"
-                class="@(currentController == "News" ? "active" : "")"
-                title="Oyun Dünyasından Haberdar Ol">
+            <a asp-controller="News" asp-action="Index">
                 <img src="https://img.icons8.com/?size=100&id=0XwEi0yisdO8&format=png&color=000000" alt="">
                 Haberler
             </a>
-            <a asp-controller="Support" asp-action="Index"
-                class="@(currentController == "Support" ? "active" : "")"
-                title="Her Adımda Yanındayız">
+            <a asp-controller="Support" asp-action="Index">
                 <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="">
                 Destek
             </a>
-            <span class="nav-divider"></span>
-            <a href="#" title="Oyun Dünyası Seni Bekliyor">
-                <img class="img-icon" src="https://img.icons8.com/?size=100&id=cYqkhYrpp4xs&format=png&color=d90000" alt="">
-                RUNE'yi İndir
+            <div class="mobile-menu-divider"></div>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=sSZiheZL0ozl&format=png&color=000000" alt="">
+                İstek Listem
             </a>
-            <span class="nav-active-pill"></span>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=iBXDn4eGtFfA&format=png&color=000000" alt="">
+                Bildirimler
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=Nf4fef5uGONQ&format=png&color=000000" alt="">
+                Sepetim
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
+                Profilim
+            </a>
+            <a href="#">
+                <img src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=000000" alt="">
+                Ayarlar
+            </a>
+            <a href="#" class="logout-link">
+                <img src="https://img.icons8.com/?size=100&id=24338&format=png&color=d90000" alt="">
+                Çıkış Yap
+            </a>
         </nav>
-        <div class="navbar-right">
-
-            @* Diller eklenecek *@
-
-            <div class="wishlist-icon">
-                <div class="utility-item">
-                    <a href="#" title="İstek Listesi">
-                        <img src="https://img.icons8.com/?size=100&id=sSZiheZL0ozl&format=png&color=000000" alt="">
-                    </a>
-                </div>
-                <div class="utility-item">
-                    <a href="#" title="Bildirimler">
-                        <img src="https://img.icons8.com/?size=100&id=iBXDn4eGtFfA&format=png&color=000000" alt="">
-                    </a>
-                </div>
-                <div class="utility-item">
-                    <a href="#" title="Sepetim">
-                        <img src="https://img.icons8.com/?size=100&id=Nf4fef5uGONQ&format=png&color=000000" alt="">
-                    </a>
-                </div>
-            </div>
-        
-            <div class="profile-card">
-                <a class="user-icon" title="Profilim" href="#">
-                    <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
-                </a>
-                <div class="profile-info">
-                    <h6 class="profile-name">LerwyN</h6>
-                    <p class="profile-level">Seviye 12</p>
-                </div>
-                <button class="profile-menu-toggle" id="profileMenuToggle" type="button" aria-label="Profil menüsünü aç" aria-expanded="false">
-                    <img class="" src="https://img.icons8.com/?size=100&id=99991&format=png&color=000000" alt="">
-                </button>
-                <div class="profile-dropdown" id="profileDropdown">
-                    <div class="profile-dropdown-header">
-                        <strong>LerwyN &</strong>
-                        <span> Seviye 12 · Admin</span>
-                    </div>
-                    <a href="#" class="profile-dropdown-item">
-                        <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt=""> Profilim
-                    </a>
-                    <a href="#" class="profile-dropdown-item">
-                        <img src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=000000" alt="">Ayarlar
-                    </a>
-                    <div class="profile-dropdown-divider"></div>
-                    <button type="button" class="profile-dropdown-item dark-theme-btn">
-                        <img src="https://img.icons8.com/?size=100&id=xlD3xOrQjTJO&format=png&color=000000" alt="">Koyu Tema
-                    </button>
-                    <button type="button" class="profile-dropdown-item light-theme-btn">
-                        <img src="https://img.icons8.com/?size=100&id=648&format=png&color=000000" alt=""> Beyaz Tema
-                    </button>
-                    <div class="profile-dropdown-divider"></div>
-                    <button type="button" class="profile-dropdown-item logout-link">
-                        <img src="https://img.icons8.com/?size=100&id=3HSHWjvK9Yxq&format=png&color=d90000" alt="">Çıkış Yap
-                    </button>
-                </div>
-            </div>
-        </div>
-        <button class="mobile-menu-button"
-                id="mobileMenuToggle"
-                type="button"
-                aria-label="Menüyü aç"
-                aria-expanded="false"
-                aria-controls="mobileMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-    <nav class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-profile">
-            <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="Profil">
-            <div>
-                <strong>LerwyN</strong>
-                <p>Seviye 12</p>
-            </div>
-        </div>
-        <a asp-controller="Home" asp-action="Index">
-            <img src="https://img.icons8.com/?size=100&id=489&format=png&color=000000" alt="">
-            Mağaza
-        </a>
-        <a asp-controller="Library" asp-action="Index">
-            <img src="https://img.icons8.com/?size=100&id=NVBQfAAOvi9A&format=png&color=000000" alt="">
-            Kütüphane
-        </a>
-        <a asp-controller="Community" asp-action="Index">
-            <img src="https://img.icons8.com/?size=100&id=101316&format=png&color=000000" alt="">
-            Topluluk
-        </a>
-        <a asp-controller="News" asp-action="Index">
-            <img src="https://img.icons8.com/?size=100&id=0XwEi0yisdO8&format=png&color=000000" alt="">
-            Haberler
-        </a>
-        <a asp-controller="Support" asp-action="Index">
-            <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="">
-            Destek
-        </a>
-        <div class="mobile-menu-divider"></div>
-        <a href="#">
-            <img src="https://img.icons8.com/?size=100&id=sSZiheZL0ozl&format=png&color=000000" alt="">
-            İstek Listem
-        </a>
-        <a href="#">
-            <img src="https://img.icons8.com/?size=100&id=iBXDn4eGtFfA&format=png&color=000000" alt="">
-            Bildirimler
-        </a>
-        <a href="#">
-            <img src="https://img.icons8.com/?size=100&id=Nf4fef5uGONQ&format=png&color=000000" alt="">
-            Sepetim
-        </a>
-        <a href="#">
-            <img src="https://img.icons8.com/?size=100&id=mj4zUKpD4IjJ&format=png&color=000000" alt="">
-            Profilim
-        </a>
-        <a href="#">
-            <img src="https://img.icons8.com/?size=100&id=4511GGVppfIx&format=png&color=000000" alt="">
-            Ayarlar
-        </a>
-        <a href="#" class="logout-link">
-            <img src="https://img.icons8.com/?size=100&id=24338&format=png&color=d90000" alt="">
-            Çıkış Yap
-        </a>
-    </nav>
-</header>
+    </header>
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -191,12 +191,89 @@ var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
         </main>
     </div>
 
-    <footer>
+    
+    
+    <footer class="rune-footer">
+        <div class="rune-footer-header">
+            <h2 class="rune-store">RuneStore</h2>
+            <div class="rune-footer-socials">
+                <a href="#" aria-label="Discord" title="Discord">
+                    <img src="https://img.icons8.com/?size=100&id=B9UPHsL3gHI2&format=png&color=ffffff" alt="Discord" />
+                </a>
+                <a href="#" aria-label="X" title="X">
+                    <img src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=ffffff" alt="X" />
+                </a>
+                <a href="#" aria-label="Instagram" title="Instagram">
+                    <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=ffffff" alt="Instagram" />
+                </a>
+                <a href="#" aria-label="YouTube" title="YouTube">
+                    <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=ffffff" alt="YouTube" />
+                </a>
+            </div>
+        </div>
+        <div class="rune-footer-main">
+            <div class="rune-footer-about  col-12 col-md-6 col-xl-4">
+                <h3>Oyun dünyasının yeni nesil ekosistemi.</h3>
+                <p>
+                    Rune; bağımsız yapımlardan devasa bütçeli hitlere kadar binlerce oyunu tek bir çatı altında toplayan
+                    yeni nesil dijital oyun platformudur. Kütüphaneni dilediğin gibi yönet, atölye desteğiyle oyunlarını
+                    modla, arkadaşlarınla sesli sohbet et ve canlı topluluk pazaryerinde ticaret yap. Geliştiriciler
+                    için adil bir pazar, oyuncular için kesintisiz bir deneyim sunuyoruz.
+                </p>
+            </div>
+            <div class="rune-footer-column col-6 col-md-3 col-xl-2">
+                <h3>Keşfet</h3>
+                <a href="#">Öne Çıkanlar</a>
+                <a href="#">Çok Satanlar</a>
+                <a href="#">Yakında Gelecekler</a>
+                <a href="#">İndirimler & Fırsatlar</a>
+                <a href="#">Ücretsiz Oyunlar</a>
+            </div>
+            <div class="rune-footer-column">
+                <h3>Topluluk</h3>
+                <a href="#">Forumlar & Tartışmalar</a>
+                <a href="#">Topluluk Pazarı</a>
+                <a href="#">Atölye (Modlar)</a>
+                <a href="#">Etkinlikler & Turnuvalar</a>
+                <a href="#">Canlı Yayınlar</a>
+            </div>
+            <div class="rune-footer-column">
+                <h3>Rune hakkında</h3>
+                <a href="#">Destek Merkezi</a>
+                <a href="#">Sunucu Durumu (Status)</a>
+                <a href="#">Güvenlik & Hile Bildirimi</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">Kariyer</a>
+            </div>
+            <div class="rune-footer-column">
+                <h3>Yasal</h3>
+                <a href="#">Gizlilik politikası</a>
+                <a href="#">Kullanım koşulları</a>
+                <a href="#">Çerez politikası</a>
+                <a href="#">KVKK</a>
+            </div>
+        </div>
+        <div class="rune-footer-bottom">
+            <p>© 2026 Rune. Gösterilen tüm oyunlar, başlıklar ve ilgili görseller ilgili yayıncıların tescilli markalarıdır.</p>
 
+            <div class="rune-footer-bottom-right">
+                <a href="#">Gizlilik</a>
+                <a href="#">Koşullar</a>
+                <span>TR · Türkiye</span>
+
+                <button type="button" class="rune-back-to-top"
+                        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+                    <span>↑</span>
+                    Yukarı çık
+                </button>
+            </div>
+        </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
