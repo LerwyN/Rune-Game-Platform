@@ -1451,14 +1451,16 @@ body>.container {
 /* ana alan */
 
 .rune-footer-main {
-  display: grid;
-  grid-template-columns: minmax(250px, 1.8fr) repeat(4, minmax(110px, 1fr));
-  gap: 36px;
-  padding: 38px 0 46px;
+    display: grid;
+    grid-template-columns: minmax(280px, 1.7fr) repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    padding: 38px 0 46px;
+    align-items: start;
 }
 
 .rune-footer-about {
-  max-width: 350px;
+    max-width: 380px;
+    min-width: 0;
 }
 
 .rune-footer-about h3,
@@ -1481,23 +1483,26 @@ body>.container {
 /* bağlantı sütunları */
 
 .rune-footer-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 13px;
-  min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: start;
+    gap: 13px;
+    min-width: 0;
 }
 
 .rune-footer-column h3 {
-  margin-bottom: 3px;
+    margin: 0 0 3px;
+    min-height: 23px;
+    line-height: 1.5;
 }
 
 .rune-footer-column a {
-  color: #b1b1b6;
-  font-size: 13px;
-  line-height: 1.6;
-  text-decoration: none;
-  transition: none;
+    color: #b1b1b6;
+    font-size: 13px;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: none;
 }
 
 .rune-footer-column a:hover {
