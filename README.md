@@ -1,7 +1,8 @@
-# Rune
+# Rune Store
 
-## Geliştirici
-**LerwyN**
+innovations:
+updated to dark theme
 
-## 🌐 Canlı Demo
-[Rune'yi ziyaret et](https://rune-game-platform.onrender.com/)
+
+## 🌐 Live Demo
+[Take a look at Rune](https://rune-game-platform.onrender.com/)
